@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> Query database</title>
+</head>
+<body>
+<input type="text" id="searchValue" onkeyup="userTyped()">
+<div style="color: blue;"id="userfeedback"></div>
+</body>
+<script>
+function userTyped(){
+var userTyped=document.getElementById('searchValue').value;
+var dataInDataBase=["Ball","Pen","Shirt","Book","List"];
+if(dataInDataBase.includes(userTyped)){
+document.getElementById('userfeedback').innerHTML=userTyped +'is in database';
+}
+else{
+document.getElementById('userfeedback').innerHTML='';
+}
+}
+</script>
+</html>
